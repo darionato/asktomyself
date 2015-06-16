@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:askmewsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:askmewsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:askmewsdl">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="get_missing_countRequest">
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="what" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="get_missing_countResponse">
+    <wsdl:part name="return" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="get_update_availableRequest">
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="version" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="get_update_availableResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="get_software_versionRequest">
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="what" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="get_software_versionResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="set_settingRequest">
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="id_setting" type="xsd:int" />
+    <wsdl:part name="val_setting" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="set_settingResponse">
+    <wsdl:part name="return" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="get_settingsRequest">
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="get_settingsResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="get_categoriesRequest">
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="get_categoriesResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="get_questionRequest">
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="category" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="get_questionResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="set_questionRequest">
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="category" type="xsd:int" />
+    <wsdl:part name="id_word" type="xsd:int" />
+    <wsdl:part name="responce" type="xsd:string" />
+    <wsdl:part name="invert" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="set_questionResponse">
+    <wsdl:part name="return" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="add_wordRequest">
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="from" type="xsd:string" />
+    <wsdl:part name="to" type="xsd:string" />
+    <wsdl:part name="category" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="add_wordResponse">
+    <wsdl:part name="return" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="try_loginRequest">
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="try_loginResponse">
+    <wsdl:part name="return" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="askmewsdlPortType">
+    <wsdl:operation name="get_missing_count">
+      <documentation>Get the missing times to fill the possibilities</documentation>
+      <wsdl:input message="tns:get_missing_countRequest" />
+      <wsdl:output message="tns:get_missing_countResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="get_update_available">
+      <documentation>Get the new version if it is available, else return an empty string</documentation>
+      <wsdl:input message="tns:get_update_availableRequest" />
+      <wsdl:output message="tns:get_update_availableResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="get_software_version">
+      <documentation>Get software version</documentation>
+      <wsdl:input message="tns:get_software_versionRequest" />
+      <wsdl:output message="tns:get_software_versionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="set_setting">
+      <documentation>Set one setting</documentation>
+      <wsdl:input message="tns:set_settingRequest" />
+      <wsdl:output message="tns:set_settingResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="get_settings">
+      <documentation>Get the user settings</documentation>
+      <wsdl:input message="tns:get_settingsRequest" />
+      <wsdl:output message="tns:get_settingsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="get_categories">
+      <documentation>Get the user categories</documentation>
+      <wsdl:input message="tns:get_categoriesRequest" />
+      <wsdl:output message="tns:get_categoriesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="get_question">
+      <documentation>Get a question</documentation>
+      <wsdl:input message="tns:get_questionRequest" />
+      <wsdl:output message="tns:get_questionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="set_question">
+      <documentation>Check if the aswer is correct</documentation>
+      <wsdl:input message="tns:set_questionRequest" />
+      <wsdl:output message="tns:set_questionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="add_word">
+      <documentation>Add a word</documentation>
+      <wsdl:input message="tns:add_wordRequest" />
+      <wsdl:output message="tns:add_wordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="try_login">
+      <documentation>Check username and password</documentation>
+      <wsdl:input message="tns:try_loginRequest" />
+      <wsdl:output message="tns:try_loginResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="askmewsdlBinding" type="tns:askmewsdlPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="get_missing_count">
+      <soap:operation soapAction="urn:askmewsdl#get_missing_count" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_update_available">
+      <soap:operation soapAction="urn:askmewsdl#get_update_available" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_software_version">
+      <soap:operation soapAction="urn:askmewsdl#get_software_version" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="set_setting">
+      <soap:operation soapAction="urn:askmewsdl#set_setting" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_settings">
+      <soap:operation soapAction="urn:askmewsdl#get_settings" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_categories">
+      <soap:operation soapAction="urn:askmewsdl#get_categories" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_question">
+      <soap:operation soapAction="urn:askmewsdl#get_question" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="set_question">
+      <soap:operation soapAction="urn:askmewsdl#set_question" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_word">
+      <soap:operation soapAction="urn:askmewsdl#add_word" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="try_login">
+      <soap:operation soapAction="urn:askmewsdl#try_login" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:askmewsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="askmewsdl">
+    <wsdl:port name="askmewsdlPort" binding="tns:askmewsdlBinding">
+      <soap:address location="http://www.asktomyself.com/service/askme.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

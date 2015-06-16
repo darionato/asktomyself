@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{58B5DEF8-FFA4-41FD-9AF1-D9F30747ED33}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>asktomyself</RootNamespace>
+    <AssemblyName>asktomyself</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>emoticon_happy.ico</ApplicationIcon>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="askme.core\askmecategory.cs" />
+    <Compile Include="askme.core\askmecheck.cs" />
+    <Compile Include="askme.core\askmeconf.cs" />
+    <Compile Include="askme.core\askmecrypt.cs" />
+    <Compile Include="askme.image\askmeimageresponse.cs" />
+    <Compile Include="askme.image\askmeimagesearch.cs" />
+    <Compile Include="askme.core\askmepath.cs" />
+    <Compile Include="form_about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_about.Designer.cs">
+      <DependentUpon>form_about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_add_word.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_add_word.Designer.cs">
+      <DependentUpon>form_add_word.cs</DependentUpon>
+    </Compile>
+    <Compile Include="askme.core\askmecore.cs" />
+    <Compile Include="askme.core\askmequestion.cs" />
+    <Compile Include="askme.core\askmewsdl.cs" />
+    <Compile Include="form_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_login.Designer.cs">
+      <DependentUpon>form_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\askmeWsdlService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="form_about.resx">
+      <DependentUpon>form_about.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_add_word.resx">
+      <DependentUpon>form_add_word.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_login.resx">
+      <DependentUpon>form_login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\askmeWsdlService\askme.wsdl" />
+    <None Include="Web References\askmeWsdlService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.asktomyself.com/service/askme.php%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\askmeWsdlService\</RelPath>
+      <UpdateFromURL>http://www.asktomyself.com/service/askme.php%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>askme_askmeWsdlService_askmewsdl</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\color_black_white.png" />
+    <Content Include="emoticon_happy.ico" />
+    <EmbeddedResource Include="Resources\emoticon_unhappy_invert32.png" />
+    <EmbeddedResource Include="Resources\emoticon_unhappy_invert.png" />
+    <EmbeddedResource Include="Resources\emoticon_tongue_gray_left.png" />
+    <EmbeddedResource Include="Resources\emoticon_tongue_gray_left32.png" />
+    <EmbeddedResource Include="Resources\emoticon_tongue_gray_middle.png" />
+    <EmbeddedResource Include="Resources\emoticon_tongue_gray_middle32.png" />
+    <None Include="Resources\messagebox_info.png" />
+    <None Include="Resources\exit.png" />
+    <EmbeddedResource Include="Resources\emoticon_happy.png" />
+    <EmbeddedResource Include="Resources\emoticon_happy32.png" />
+    <EmbeddedResource Include="Resources\emoticon_tongue32.png" />
+    <EmbeddedResource Include="Resources\emoticon_tongue_gray32.png" />
+    <EmbeddedResource Include="Resources\emoticon_tongue_invert32.png" />
+    <EmbeddedResource Include="Resources\emoticon_unhappy32.png" />
+    <EmbeddedResource Include="Resources\invert.png" />
+    <None Include="Resources\category.png" />
+    <EmbeddedResource Include="Resources\emoticon_play.png" />
+    <EmbeddedResource Include="Resources\emoticon_stop.png" />
+    <EmbeddedResource Include="Resources\emoticon_tongue_invert.png" />
+    <EmbeddedResource Include="Resources\emoticon_unhappy.png" />
+    <EmbeddedResource Include="Resources\tag_orange.png" />
+    <None Include="Resources\category.bmp" />
+    <EmbeddedResource Include="Resources\emoticon_tongue_gray.png" />
+    <EmbeddedResource Include="Resources\emoticon_tongue.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

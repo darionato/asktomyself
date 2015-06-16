@@ -1,0 +1,248 @@
+/* 
+    Document   : asktomyself_myarea_menu
+    Created on : Feb 24, 2010, 9:38:04 PM
+    Author     : dario
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+#mask_modal_dialog {
+  position:fixed;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+  left: 0;
+  top: 0;
+}
+
+#boxes_dialog .window {
+    position:fixed;
+    width:440px;
+    height:200px;
+    display:none;
+    z-index:9999;
+    padding:20px;
+}
+
+#boxes_dialog #dialog {
+    background: url(../images/dialog_back.png) transparent top left no-repeat;
+    width:325px;
+    height:320px;
+}
+
+#boxes_dialog #dialog p:first-child {
+    width: 250px;
+    margin-top: 38px;
+}
+
+#boxes_dialog #dialog p.btn_save_close {
+    width: 250px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#boxes_dialog #dialog p {
+    width: 250px;
+    margin-top: 10px;
+}
+
+#boxes_dialog #dialog .dialog_title {
+    width: 230px;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.myarea_template_menu
+{
+    background:#585858;
+    padding: 0px;
+    width:135px;
+    float: left;
+    margin-top: 60px;
+}
+
+.myarea_template_body
+{
+    float: right;
+    width: 700px;
+}
+
+.myarea_head
+{
+    border: 0px solid #782121;
+    cursor: pointer;
+}
+
+.myarea_menu
+{
+    width:135px;
+    border-right:0px solid #782121;
+    border-bottom:0px solid #782121;
+    border-left:0px solid #782121;
+}
+
+.myarea_menu li
+{
+    background:#404040;
+}
+
+.myarea_menu li a
+{
+    color:#FFFFFF;
+    text-decoration:none;
+    padding:10px;
+    display:block;
+}
+
+.myarea_menu li.alt
+{
+    background:#585858;
+}
+
+.myarea_menu li a:hover
+{
+    font-weight:bold;
+}
+
+#myarea_words
+{
+    position: inherit;
+}
+
+#myarea_categories
+{
+    width: 225px;
+}
+
+#myarea_word_combo
+{
+    height: 40px;
+    width: 250px;
+    position: relative;
+}
+
+#myarea_word_progress
+{
+    background: url(../images/loader.gif) center no-repeat;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: none;
+    float: right;
+}
+
+.welcome_div p
+{
+    margin-top: 15px;
+}
+
+.welcome_div p.welcome_h3
+{
+    margin-top: 30px;
+}
+
+.welcome_div ul
+{
+    margin-top: 5px;
+}
+
+.div_categories
+{
+    width: 450px;
+}
+
+.div_categories table
+{
+    width: 520px;
+}
+
+.div_categories h3.space_top
+{
+    margin-top: 25px;
+}
+
+.div_categories td.col_desc
+{
+    width: 370px;
+}
+
+.div_categories #askme_categories tr td.col_desc input.gradient_text
+{
+    width: 350px;
+}
+
+.div_categories #askme_categories tr td.col_desc input.et_text
+{
+    width: 350px;
+}
+
+.div_categories #askme_categories td.col_shared
+{
+    width: 70px;
+    text-align: center;
+}
+
+.div_categories #askme_shared_categories td.col_nick
+{
+    width: 100px;
+}
+/*
+.div_categories #askme_shared_categories td.col_nick span
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+*/
+.search_bar_block
+{
+    float: left;
+    width: 550px;
+}
+
+#search_string
+{
+    width: 280px;
+    margin-right: 10px;
+    padding: 3px;
+}
+
+#search_result
+{
+    margin-top: 20px;
+}
+
+#search_result table
+{
+    width: 535px;
+}
+
+#search_result table tr td.col_Name
+{
+    width: 120px;
+}
+
+#search_result table tr:first-child
+{
+    font-size: 14px;
+}
+
+#search_result table tr td.col_Description
+{
+    width: 270px;
+}
+
+#search_result table tr td.col_Shared_by
+{
+    width: 85px;
+}
+
+#search_result table tr td.col_Rating
+{
+    width: 50px;
+    text-align: center;
+}

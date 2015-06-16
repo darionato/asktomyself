@@ -1,0 +1,116 @@
+/* 
+    Document   : asktomyself_edittable
+    Created on : Feb 23, 2010, 9:47:10 PM
+    Author     : dario
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.et_table
+{
+    display: block;
+    border: none;
+    border-spacing: 0px;
+}
+
+.et_table td
+{
+    border-bottom: solid 1px silver;
+    padding-right: 4px;
+}
+
+.et_table input.et_text
+{
+    border: none;
+    background-color: transparent;
+}
+
+.et_table a
+{
+    background-position:0 0;
+    background-repeat:no-repeat;
+    display:block;
+    float:left;
+    height:25px;
+    margin:0 4px 0 0;
+    text-indent:-9999px;
+}
+
+.et_table a.et_details_row
+{
+    background: url(../images/grid_detail.png) transparent center no-repeat;
+    width: 24px;
+}
+
+.et_table a.et_del_row
+{
+    background: url(../images/grid_del.png) transparent center no-repeat;
+    width: 24px;
+}
+
+.et_table a.et_save_row
+{
+    background: url(../images/grid_save.png) transparent center no-repeat;
+    width: 24px;
+}
+
+.et_table a.et_add_row, a.et_add_share
+{
+    background: url(../images/grid_add.png) transparent center no-repeat;
+    width: 24px;
+}
+
+.et_table td.col_id_category
+{
+    display: none;
+}
+
+.et_table td.col_id_word
+{
+    display: none;
+}
+
+.et_table td.col_id_setting
+{
+    display: none;
+}
+
+.et_table td.col_id_user
+{
+    display: none;
+}
+
+.et_table td.col_regexp_value
+{
+    display: none;
+}
+
+.et_table tr.et_row_new
+{
+    height: 35px;
+}
+
+#askme_settings .col_desc
+{
+    width: 200px;
+}
+
+#askme_settings .col_desc
+{
+    width: 200px;
+}
+
+#askme_settings .col_value
+{
+    width: 40px;
+}
+
+#askme_settings .col_value .et_text
+{
+    width: 30px;
+}

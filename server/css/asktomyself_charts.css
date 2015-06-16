@@ -1,0 +1,79 @@
+.charts_table
+{
+    margin: 0 auto;
+    width: 400px;
+    padding-bottom: 70px;
+}
+
+.charts_table #askme_questions
+{
+    width: 440px;
+}
+
+.charts_table #askme_questions tr:nth-child(2)
+{
+    font-size: 20px;
+    height: 40px;
+}
+
+.charts_table #askme_questions tr:nth-child(3)
+{
+    font-size: 16px;
+    height: 40px;
+}
+
+.charts_table #askme_questions tr:nth-child(4)
+{
+    font-size: 14px;
+    height: 40px;
+}
+
+.charts_table #askme_questions tr:nth-child(1)
+{
+    height: 40px;
+}
+
+.charts_table #askme_questions tr td
+{
+    border-bottom: 0px !important;
+}
+
+.charts_table #askme_questions tr td.col_Nickname
+{
+    width: 200px;
+    text-transform: uppercase;
+}
+
+.charts_table #askme_questions tr td.col_Country
+{
+    width: 100px;
+    text-align: center;
+}
+
+.charts_table #askme_questions tr td.col_Score
+{
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.charts_table #askme_questions tr:nth-child(2) td a.medal
+{
+    background: url(../images/medal_gold.png) transparent center no-repeat;
+    width: 32px;
+    min-height: 32px;
+}
+
+.charts_table #askme_questions tr:nth-child(3) td a.medal
+{
+    background: url(../images/medal_silver.png) transparent center no-repeat;
+    width: 32px;
+    min-height: 32px;
+}
+
+.charts_table #askme_questions tr:nth-child(4) td a.medal
+{
+    background: url(../images/medal_bronze.png) transparent center no-repeat;
+    width: 32px;
+    min-height: 32px;
+}

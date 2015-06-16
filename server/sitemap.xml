@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.asktomyself.com/</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.asktomyself.com/index.php?ptg=contacts</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.asktomyself.com/index.php?ptg=login</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.asktomyself.com/index.php?ptg=signup</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.asktomyself.com/index.php</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.asktomyself.com/index.php?ptg=tour</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.asktomyself.com/index.php?ptg=getit</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.asktomyself.com/pages/terms_and_conditions.html</loc>
+  <lastmod>2010-09-18T11:04:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.asktomyself.com/index.php?ptg=getit&amp;sct=linux</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.asktomyself.com/index.php?ptg=getit&amp;sct=win</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.asktomyself.com/index.php?ptg=getit&amp;sct=mac</loc>
+  <priority>0.64</priority>
+</url>
+</urlset>

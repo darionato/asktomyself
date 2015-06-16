@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="string_asking_service">AskToMyself Service</string>
+    <string name="string_start_asking">Start asking</string>
+    <string name="string_categories">Categories</string>
+    <string name="string_signin_auto">Sign-in automatically</string>
+    <string name="string_password">Password:</string>
+    <string name="string_email">E-mail:</string>
+    
+    <string name="app_name">Ask To Myself</string>
+	<string name="string_login">Login</string>
+	<string name="string_cancel">Cancel</string>
+	<string name="config_email">email</string>
+	<string name="config_pwd">pwd</string>
+	<string name="config_signin">signin</string>
+	<string name="category_id">category_id</string>
+	<string name="category_desc">category_desc</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" android:text="@string/string_email"/>
+
+<EditText android:id="@+id/txtEmail" android:layout_height="wrap_content" android:layout_width="fill_parent"></EditText>
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/string_password"></TextView>
+<EditText android:layout_height="wrap_content" android:id="@+id/txtPassword" android:layout_width="fill_parent" android:inputType="textPassword"></EditText>
+<CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/string_signin_auto" android:id="@+id/chkSignInAuto"></CheckBox>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/string_login" android:id="@+id/btnLogin"></Button>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/string_cancel" android:id="@+id/btnCancel"></Button>
+</LinearLayout>
